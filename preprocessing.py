@@ -17,7 +17,15 @@ class Processing:
     
     # Remve the catagorical columns 
 
-    def
+    def remove_cat(self):
+        try:
+            categorical_features=[feature for feature in self.data.columns
+                     if self.data[feature].dtypes=="O"]
+            print(categorical_features)
+            self.data.drop(labels=categorical_features,axis=1,inplace=True)
+            return self.data
+        except Exception as e:
+            return Exception()
 
 
     

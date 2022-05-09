@@ -14,4 +14,7 @@ process=Processing(data)
 
 mis= process.checking_missing_value()
 print("The missiong values are ",mis)
-
+print("before",data.shape)
+## Removing the catagorical features columns
+process.remove_cat()
+print("After",data.shape)
