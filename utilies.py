@@ -8,6 +8,10 @@ class Utilies:
 
 # loading data 
     def data_loader(self,path):
+        """ Method data_loader
+            Descriptions load the given data
+            Output Pandas DataFrame  
+        """
         try:
             return pd.read_csv(path)
         except Exception as e:
